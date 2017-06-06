@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" style="height:400px">
+      <div class="thumbnail">
+        <img src="{{product.image}}" alt="..." style="height:400px">
+        <div class="caption">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-8 " style="height:300px">
+
+          <h3>{{product.name}}</h3>
+          <div class="panel panel-danger" >
+            <div class="panel-body">
+                <div2><h4>{{product.price | currency}}</h4></div>
+            </div>
+            <div class="panel-footer">
+                <ul>
+                  <li>{{product.features.weight}}</li>
+                  <li>{{product.features.ram}}</li>
+                  <li>{{product.features.camera}}</li>
+                  <li>{{product.features.display}}</li>
+                  <li>{{product.features.memory}}</li>
+                </ul>
+            </div>
+          </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</center>
+<div class="panel panel-primary special" >
+  <div class="panel-body ">
+    Reviews
+  </div>
+  <div class="panel-footer" ng-repeat="onereview in product.reviews">
+    <div class="row review">
+        <div class="col-sm-6 col-md-8">
+            {{onereview.review}}
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div star-rating rating="{{onereview.rate}}"></div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+</center>
+</div>

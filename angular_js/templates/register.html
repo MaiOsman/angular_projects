@@ -1,0 +1,40 @@
+<h1 id="log_head">Register Form</h1>
+<form novalidate name="regForm" id="reg_form" ng-submit="submited=true ; register(regForm.$valid)">
+  <div class="container">
+      <label><span style="color:red">*</span>User Name:</label>
+      <input type = "text" name="reg_uName" ng-model = "user.name" required="">
+      <p class="error"ng-if="regForm.reg_uName.$error.required && submited">Please enter your name</p>
+
+      <label><span style="color:red">*</span>Full Name:</label>
+      <input type = "text" name="reg_fName" ng-model = "user.fullName"  required="">
+      <p class="error"ng-if="regForm.reg_fName.$error.required && submited">Please enter your full name</p>
+
+      <label><span style="color:red">*</span>Email:</label>
+      <input type = "text" name="reg_email" ng-model = "user.email" placeholder = "example@example.com" required="">
+      <p class="error" ng-if="regForm.reg_email.$error.required && submited">Please enter your email</p>
+      <p class="error" ng-if="regForm.reg_email.$error.email && submited">Invalid Email</p>
+
+      <label>Address:</label>
+      <input type = "text" name="reg_address" ng-model = "user.address">
+      <p class="error"ng-if="regForm.reg_email.$error.required && submited">Please enter your address</p>
+
+      <label><span style="color:red">*</span>Mobil:</label>
+      <input type = "text" name="reg_mobil" ng-pattern = "/^[0][0-9]{10}/" ng-model = "user.mobile" required="">
+      <p class="error"ng-if="regForm.reg_mobil.$error.required && submited">Please enter your mobile</p>
+      <p class="error"ng-if="regForm.reg_mobil.$error.pattern && submited">Please enter numbers (11number)</p>
+
+      <label><span style="color:red">*</span>Password:</label>
+      <input type = "password" name="reg_passwd" ng-model = "user.passwd" required="">
+      <p class="error"ng-if="regForm.reg_passwd.$error.required && submited">Please enter your password</p>
+      <p class="error"ng-if="passError && submited">Password must be more than 4</p>
+
+      <label><span style="color:red">*</span>Confirm Password:</label>
+      <input type = "password" name="reg_rePassword" ng-model = "user.rePasswd" required="">
+      <p class="error"ng-if="regForm.reg_rePassword.$error.required && submited">Please confirm your password</p>
+      <p class="error"ng-if="repassError && submited">confirm password is not match</p>
+
+  <div class="clearfix">
+      <button class="signupbtn">Sumbit</button>
+</div>
+  </div>
+</form>

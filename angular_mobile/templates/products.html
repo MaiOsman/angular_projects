@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="product in products" style="height : 500px;">
+      <div class="thumbnail">
+        <img src="{{product.image}}" alt="..." style="  height: 300px;">
+        <div class="caption">
+          <h3>{{product.name}} {{product.price | currency}}</h3>
+          <div star-rating rating="{{product.reviews[0].rate}}"></div>
+          <!-- <div star-rating rating="{{product.rate}}"></div> -->
+          <!-- <p>{{product.description}}</p> -->
+          <p><a href="#!/singleProduct/{{$index}}" class="btn btn-primary" role="button">Details</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

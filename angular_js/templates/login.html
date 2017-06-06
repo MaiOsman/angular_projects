@@ -1,0 +1,18 @@
+<h1 id="login_head">Login Form</h1>
+<form novalidate name="loginForm" id="login_form" ng-submit="submited=true ; login(loginForm.$valid)">
+  <div class="container">
+      <p class="error"ng-if="login_loginError && submited">wrong user name or Password</p>
+
+      <label><span style="color:red">*</span>User Name:</label>
+      <input type = "text" name="login_uName" ng-model = "login.savedname" required="">
+      <p class="error"ng-if="regForm.login_uName.$error.required && submited">Please enter your name</p>
+
+      <label><span style="color:red">*</span>Password:</label>
+      <input type = "password" name="login_passwd" ng-model = "login.savedpasswd" required="">
+      <p class="error"ng-if="regForm.login_passwd.$error.required && submited">Please enter your password</p>
+
+  <div class="clearfix">
+      <button class="signupbtn">Login</button>
+</div>
+  </div>
+</form>

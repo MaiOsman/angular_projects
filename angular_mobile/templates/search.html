@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-6 col-md-11" ng-repeat="product in products | filter : $root.searchRes" >
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <img src="{{product.image}}" alt="..." style="  height: 235px;">
+            </div>
+            <div class="col-sm-6 col-md-7">
+              <h3 class="search">{{product.name}} </h3>
+            </div>
+            <div class="col-sm-6 col-md-2">
+              <div class="search" star-rating rating="{{product.reviews[0].rate}}"></div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

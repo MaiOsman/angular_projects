@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-9">
+      <div class="thumbnail">
+        <h3>{{number | round : 3}}</h3>
+        <img src="{{products.images}}" alt="...">
+        <input type="text" ng-model="products.rate">
+            <div single-rating ng-model="products.rate"></div>
+        <div class="caption">
+          <h3>{{products.name}}</h3>
+          <p>{{products.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
